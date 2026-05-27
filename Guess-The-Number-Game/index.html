@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Number Game</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>🎯 Guess The Number</h1>
+
+        <p class="info">
+            I have selected a number between 1 and 100.
+        </p>
+
+        <input
+            type="number"
+            id="guessInput"
+            placeholder="Enter your guess"
+        >
+
+        <div class="button-group">
+
+            <button onclick="checkGuess()">
+                Guess
+            </button>
+
+            <button onclick="restartGame()" class="restart-btn">
+                Restart
+            </button>
+
+            <button onclick="toggleDarkMode()" class="dark-btn">
+                Dark Mode
+            </button>
+
+        </div>
+
+        <div class="result" id="result">
+            Start guessing...
+        </div>
+
+        <div class="stats">
+            <div class="card">
+                <h3>Attempts</h3>
+                <p id="attempts">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Best Score</h3>
+                <p id="bestScore">0</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        Developed by Abhishek Badiger
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,1 +1,0 @@
-# SkillCraft-Software-Engineering-Internship

@@ -97,17 +97,9 @@ This project helps in learning:
 
 # 👨‍💻 Author
 
-Developed by Your Name
+# Developed by Abhishek V Badiger
 
 ---
-
-# ⭐ GitHub Tips
-
-If you like this project:
-
-⭐ Star the repository
-🍴 Fork the project
-📢 Share with others
 ![Too High](<Screenshot 2026-05-27 122336.png>)
 ![Too Low](<Screenshot 2026-05-27 122442.png>)
 ![Correct Guess](<Screenshot 2026-05-27 122512.png>)

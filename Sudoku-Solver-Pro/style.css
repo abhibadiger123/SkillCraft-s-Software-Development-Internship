@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: 0.3s ease;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+}
+
+.header h1 {
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* Sudoku Board */
+
+.sudoku-board {
+    display: grid;
+    grid-template-columns: repeat(9, 55px);
+    grid-template-rows: repeat(9, 55px);
+    gap: 0;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.sudoku-board input {
+    width: 55px;
+    height: 55px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.2s;
+}
+
+.sudoku-board input:focus {
+    background-color: #eaf6ff;
+}
+
+/* 3x3 Box Borders */
+
+.sudoku-board input:nth-child(3n) {
+    border-right: 2px solid black;
+}
+
+.sudoku-board input:nth-child(9n) {
+    border-right: 2px solid black;
+}
+
+.sudoku-board input:nth-child(n+19):nth-child(-n+27),
+.sudoku-board input:nth-child(n+46):nth-child(-n+54) {
+    border-bottom: 2px solid black;
+}
+
+/* Buttons */
+
+.button-group {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.button-group button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+.button-group button:hover {
+    transform: translateY(-2px);
+}
+
+.solve-btn {
+    background: #28a745;
+}
+
+.sample-btn {
+    background: #007bff;
+}
+
+.clear-btn {
+    background: #dc3545;
+}
+
+.dark-btn {
+    background: #343a40;
+}
+
+/* Statistics Cards */
+
+.stats {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.card {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.card p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Status Message */
+
+.message {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #28a745;
+}
+
+/* Footer */
+
+footer {
+    margin-top: 20px;
+    color: rgb(5, 11, 10);
+    text-align: center;
+}
+
+/* Dark Mode */
+
+.dark-mode {
+    background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+.dark-mode .container {
+    background: #222;
+    color: white;
+}
+
+.dark-mode .header p {
+    color: #ccc;
+}
+
+.dark-mode .card {
+    background: #333;
+}
+
+.dark-mode .card h3,
+.dark-mode .card p {
+    color: white;
+}
+
+.dark-mode .sudoku-board input {
+    background: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+.dark-mode .message {
+    color: #00ff99;
+}
+
+/* Responsive */
+
+@media (max-width: 650px) {
+
+    .sudoku-board {
+        grid-template-columns: repeat(9, 35px);
+        grid-template-rows: repeat(9, 35px);
+    }
+
+    .sudoku-board input {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .button-group button {
+        width: 100%;
+    }
+}

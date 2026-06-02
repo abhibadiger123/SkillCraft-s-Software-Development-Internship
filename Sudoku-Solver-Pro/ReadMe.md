@@ -1,5 +1,5 @@
 # 🧩 Sudoku Solver Pro
-
+1-Month Software Engineering Internship at SkillCraft Technology | Third Task: Sudoku Solver Pro Project 🚀
 A clean, responsive web-based Sudoku solver built using HTML, CSS, and JavaScript. This project demonstrates the implementation of the **Backtracking Algorithm** to solve 9x9 Sudoku puzzles automatically.
 
 ## 🚀 Features
